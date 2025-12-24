@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import santaSleigh from '@/assets/cute-santa-sleigh.png';
 
 interface SantaCardProps {
   onReveal: () => void;
@@ -33,36 +34,12 @@ const SantaCard = ({ onReveal }: SantaCardProps) => {
             exit={{ opacity: 0, scale: 0.9 }}
           >
             {/* Santa illustration */}
-            <div className="h-2/3 bg-gradient-to-b from-blush to-cream-warm flex items-center justify-center relative overflow-hidden">
-              {/* Simple Santa face */}
-              <div className="relative">
-                {/* Hat */}
-                <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-20 h-16">
-                  <div className="w-full h-12 bg-accent rounded-t-full" />
-                  <div className="absolute bottom-0 w-full h-3 bg-snow rounded-full" />
-                  <div className="absolute -top-2 right-0 w-5 h-5 bg-snow rounded-full" />
-                </div>
-                
-                {/* Face */}
-                <div className="w-24 h-24 bg-cream-warm rounded-full relative">
-                  {/* Eyes */}
-                  <div className="absolute top-7 left-5 w-3 h-3 bg-burgundy rounded-full" />
-                  <div className="absolute top-7 right-5 w-3 h-3 bg-burgundy rounded-full" />
-                  
-                  {/* Rosy cheeks */}
-                  <div className="absolute top-10 left-2 w-5 h-3 bg-rose-soft/60 rounded-full" />
-                  <div className="absolute top-10 right-2 w-5 h-3 bg-rose-soft/60 rounded-full" />
-                  
-                  {/* Nose */}
-                  <div className="absolute top-10 left-1/2 -translate-x-1/2 w-4 h-4 bg-rose-soft rounded-full" />
-                  
-                  {/* Mustache */}
-                  <div className="absolute top-14 left-1/2 -translate-x-1/2 w-16 h-4 bg-snow rounded-full" />
-                  
-                  {/* Beard */}
-                  <div className="absolute top-16 left-1/2 -translate-x-1/2 w-20 h-14 bg-snow rounded-b-full" />
-                </div>
-              </div>
+            <div className="h-2/3 bg-gradient-to-b from-blush to-cream-warm flex items-center justify-center p-4">
+              <img 
+                src={santaSleigh} 
+                alt="Cute Santa on his sleigh" 
+                className="w-full h-full object-contain"
+              />
             </div>
             
             {/* Card text */}
