@@ -4,7 +4,7 @@ import Snowflakes from '@/components/Snowflakes';
 import PresentBox from '@/components/PresentBox';
 import Snowman from '@/components/Snowman';
 import FlashCard from '@/components/FlashCard';
-import SantaCard from '@/components/SantaCard';
+import ChristmasLetter from '@/components/ChristmasLetter';
 import FinalMessage from '@/components/FinalMessage';
 import { Button } from '@/components/ui/button';
 
@@ -180,7 +180,7 @@ const Index = () => {
                 Merry Christmas Avy
               </motion.h2>
               
-              <SantaCard onReveal={handleSantaReveal} />
+              <ChristmasLetter onReveal={handleSantaReveal} />
             </motion.div>
           )}
 
