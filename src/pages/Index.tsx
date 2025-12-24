@@ -14,7 +14,7 @@ const Index = () => {
   const [scene, setScene] = useState<Scene>('opening');
   const [flippedCards, setFlippedCards] = useState<number>(0);
 
-  const words = ['You', 'Are', 'My', 'Cutest', 'Gift'];
+  const words = ['Your', 'Presence', 'Already', 'Means', 'Everything', 'To', 'Me'];
 
   const handlePresentClick = () => {
     setScene('snowman');
@@ -29,7 +29,7 @@ const Index = () => {
   };
 
   useEffect(() => {
-    if (flippedCards === 5) {
+    if (flippedCards === 7) {
       const timer = setTimeout(() => {
         setScene('final');
       }, 3000);
@@ -148,7 +148,7 @@ const Index = () => {
                 ))}
               </div>
               
-              {flippedCards < 5 && (
+              {flippedCards < 7 && (
                 <motion.p
                   className="font-elegant text-base text-muted-foreground mt-4"
                   initial={{ opacity: 0 }}
@@ -177,7 +177,7 @@ const Index = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                Merry Christmas to my cutiepie
+                Merry Christmas to Avy
               </motion.h2>
               
               <SantaCard onReveal={handleSantaReveal} />
