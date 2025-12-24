@@ -177,7 +177,7 @@ const Index = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                Merry Christmas to Avy
+                Merry Christmas Avy
               </motion.h2>
               
               <SantaCard onReveal={handleSantaReveal} />
