@@ -4,7 +4,7 @@ import Snowflakes from '@/components/Snowflakes';
 import PresentBox from '@/components/PresentBox';
 import Snowman from '@/components/Snowman';
 import FlashCard from '@/components/FlashCard';
-
+import LoveEnvelope from '@/components/LoveEnvelope';
 import FinalMessage from '@/components/FinalMessage';
 import { Button } from '@/components/ui/button';
 
@@ -37,6 +37,9 @@ const Index = () => {
     }
   }, [flippedCards]);
 
+  const handleEnvelopeReveal = () => {
+    setScene('message');
+  };
 
   return (
     <div className="min-h-screen bg-romantic-gradient relative overflow-hidden">
@@ -158,7 +161,7 @@ const Index = () => {
             </motion.div>
           )}
 
-          {/* Final Scene - Title then Message */}
+          {/* Final Scene with Heart Envelope */}
           {scene === 'final' && (
             <motion.div
               key="final"
@@ -167,9 +170,6 @@ const Index = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }}
-              onAnimationComplete={() => {
-                setTimeout(() => setScene('message'), 2000);
-              }}
             >
               <motion.h2
                 className="font-romantic text-3xl md:text-5xl text-burgundy text-center px-4"
@@ -179,6 +179,8 @@ const Index = () => {
               >
                 Merry Christmas Avy
               </motion.h2>
+              
+              <LoveEnvelope onReveal={handleEnvelopeReveal} />
             </motion.div>
           )}
 
